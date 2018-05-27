@@ -1,0 +1,4 @@
+@cee: {"project_name":"JS","@timestamp":"2018-05-27T17:10:09+08:00","request_time":"2018-05-27 05:10:09","message":{"log_master":"js","ext":"-","request":"18","domrender":"33","fp":"5","domready":"1161","onload":"1194","fmp":"1170","TTI":"1156"}}
+
+@cee: {"project_name":"JS","@timestamp":"2018-05-27T17:10:22+08:00","request_time":"2018-05-27 05:10:22","message":{"log_master":"js","ext":"-","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36","currentUrl":"file:///Users/zhengguorong/project/xbossdebug-web/example/index.html","timestamp":"1527412222832.8696","projectType":"PC","flashVer":"-","title":"Document","screenSize":"1920x1080","referer":"","host":"file://","request":"14","domrender":"44","fp":"8","domready":"132","onload":"174","fmp":"177","TTI":"121"}}
+

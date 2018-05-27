@@ -1,0 +1,84 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 5
+    },
+    "auditLog": "/Users/zhengguorong/project/feature/xbossdebug-node/jslogs/log-audit.json",
+    "files": [
+        {
+            "date": 1527410479437,
+            "name": "/Users/zhengguorong/project/feature/xbossdebug-node/jslogs/jserror.access.log.201805271641",
+            "hash": "e6d7749e11756870e5ae0795c9c1ac85"
+        },
+        {
+            "date": 1527410594696,
+            "name": "/Users/zhengguorong/project/feature/xbossdebug-node/jslogs/jserror.access.log.201805271643",
+            "hash": "77715a421b83d5dc45aad940fdf8225b"
+        },
+        {
+            "date": 1527410633667,
+            "name": "/Users/zhengguorong/project/feature/xbossdebug-node/jslogs/jserror.access.log.201805271643",
+            "hash": "ae2728e24e6961da3d51051a84b91804"
+        },
+        {
+            "date": 1527410682899,
+            "name": "/Users/zhengguorong/project/feature/xbossdebug-node/jslogs/jserror.access.log.201805271644",
+            "hash": "7b8813a783984c3485b1482673cf2794"
+        },
+        {
+            "date": 1527410724866,
+            "name": "/Users/zhengguorong/project/feature/xbossdebug-node/jslogs/jserror.access.log.201805271645",
+            "hash": "8e5cbc44ee9608004c3d7ed26775b96f"
+        },
+        {
+            "date": 1527411192426,
+            "name": "/Users/zhengguorong/project/feature/xbossdebug-node/jslogs/jserror.access.log.201805271653",
+            "hash": "484abf0473b713cb9ed1a1881ad2d64b"
+        },
+        {
+            "date": 1527411207356,
+            "name": "/Users/zhengguorong/project/feature/xbossdebug-node/jslogs/jserror.access.log.201805271653",
+            "hash": "53d8654c84b5edec57ac1731515437c7"
+        },
+        {
+            "date": 1527411222409,
+            "name": "/Users/zhengguorong/project/feature/xbossdebug-node/jslogs/jserror.access.log.201805271653",
+            "hash": "5f9b53c48166705674e478d77c3ff752"
+        },
+        {
+            "date": 1527411361631,
+            "name": "/Users/zhengguorong/project/feature/xbossdebug-node/jslogs/jserror.access.log.201805271656",
+            "hash": "c925c1bf95c3c91cea091d4d15cc57e6"
+        },
+        {
+            "date": 1527411440146,
+            "name": "/Users/zhengguorong/project/feature/xbossdebug-node/jslogs/jserror.access.log.201805271657",
+            "hash": "23c518c7264ade1bf5dbfee14943c78e"
+        },
+        {
+            "date": 1527411859743,
+            "name": "/Users/zhengguorong/project/feature/xbossdebug-node/jslogs/jserror.access.log.201805271704",
+            "hash": "c735f55bed0d228d4150ea682acf105c"
+        },
+        {
+            "date": 1527412209712,
+            "name": "/Users/zhengguorong/project/feature/xbossdebug-node/jslogs/jserror.access.log.201805271710",
+            "hash": "ed0e5c3bac4e31bd534c701013589f26"
+        },
+        {
+            "date": 1527412386205,
+            "name": "/Users/zhengguorong/project/feature/xbossdebug-node/jslogs/jserror.access.log.201805271713",
+            "hash": "30cf0fd85883609755b91a8eb8f54707"
+        },
+        {
+            "date": 1527412737655,
+            "name": "/Users/zhengguorong/project/feature/xbossdebug-node/jslogs/jserror.access.log.201805271718",
+            "hash": "d2abac3f532e031354857a8657c69665"
+        },
+        {
+            "date": 1527427603884,
+            "name": "/Users/zhengguorong/project/feature/xbossdebug-node/jslogs/jserror.access.log.201805272126",
+            "hash": "8d7c7313c56c628412bf87af4766eb71"
+        }
+    ]
+}
