@@ -21,37 +21,37 @@ var rotatingLogStream = require("file-stream-rotator").getStream({
     "/Users/zhengguorong/project/feature/xbossdebug-node/jslogs/log-audit.json"
 });
 
-var msgFormat = function (err_msg) {
+var msgFormat = function(err_msg) {
   let logs = [];
-  let errmsg = decodeURIComponent(err_msg)
+  let errmsg = decodeURIComponent(err_msg);
   let errLogs = errmsg.split("|");
   errLogs = errLogs.map(msg => {
-    let params = {
-      log_master: "js",
-      ext: "-"
-    };
+    let params = {};
     msg = msg.replace(/\^/g, "&");
     msg = msg.split("&");
     msg.forEach(item => {
       item = item.split("=");
       params[item[0]] = item[1];
     });
-    return params
-  })
-  return errLogs
-}
+    params["log_master"] = params["msg"] ?  "log" : "perf";
+    return params;
+  });
+  return errLogs;
+};
 
 app.get("/read.gif", (req, res, next) => {
   let img = fs.createReadStream(path.resolve(__dirname, "./images/read.gif"));
   var err_msg = req.query.err_msg;
   var perf_msg = req.query.perf_msg;
-  var project_name = req.query.project_name
-  if (err_msg) {
-    let errLogs = msgFormat(err_msg)
-    let writelogs = []
+  var project_name = req.query.project_name;
+  var key = req.query.key;
+  if (err_msg || perf_msg) {
+    let errLogs = msgFormat(err_msg || perf_msg);
+    let writelogs = [];
     errLogs.forEach(params => {
       let log = {
         project_name: project_name,
+        key: key,
         "@timestamp": moment().format(),
         request_time: moment().format("YYYY-MM-DD hh:mm:ss"),
         message: {
@@ -59,27 +59,7 @@ app.get("/read.gif", (req, res, next) => {
         }
       };
       log = "@cee: " + JSON.stringify(log) + "\n";
-      console.log(log)
-      writelogs.push(function(cb) {
-        rotatingLogStream.write(log + "\n", cb);
-      });
-    });
-    //写入日志
-    async.parallel(writelogs);
-  } else if (perf_msg) {
-    let perfLogs = msgFormat(perf_msg)
-    let writelogs = []
-    perfLogs.forEach(params => {
-      let log = {
-        project_name: project_name,
-        "@timestamp": moment().format(),
-        request_time: moment().format("YYYY-MM-DD hh:mm:ss"),
-        message: {
-          ...params
-        }
-      };
-      log = "@cee: " + JSON.stringify(log) + "\n";
-      console.log(log)
+      console.log(log);
       writelogs.push(function(cb) {
         rotatingLogStream.write(log + "\n", cb);
       });
