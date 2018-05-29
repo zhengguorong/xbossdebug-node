@@ -50,7 +50,7 @@ app.get("/read.gif", (req, res, next) => {
     errLogs.forEach(params => {
       let log = {
         key: key,
-        "@timestamp": moment().format(),
+        "timestamp": moment().format(),
         request_time: moment().format("YYYY-MM-DD hh:mm:ss"),
         message: {
           ...params
