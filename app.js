@@ -43,14 +43,12 @@ app.get("/read.gif", (req, res, next) => {
   let img = fs.createReadStream(path.resolve(__dirname, "./images/read.gif"));
   var err_msg = req.query.err_msg;
   var perf_msg = req.query.perf_msg;
-  var project_name = req.query.project_name;
   var key = req.query.key;
   if (err_msg || perf_msg) {
     let errLogs = msgFormat(err_msg || perf_msg);
     let writelogs = [];
     errLogs.forEach(params => {
       let log = {
-        project_name: project_name,
         key: key,
         "@timestamp": moment().format(),
         request_time: moment().format("YYYY-MM-DD hh:mm:ss"),
