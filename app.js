@@ -33,7 +33,6 @@ var msgFormat = function(err_msg) {
       item = item.split("=");
       params[item[0]] = item[1];
     });
-    params["log_master"] = params["msg"] ?  "log" : "perf";
     return params;
   });
   return errLogs;
