@@ -56,7 +56,6 @@ app.get("/read.gif", (req, res, next) => {
         }
       };
       log = "@cee: " + JSON.stringify(log) + "\n";
-      console.log(log);
       writelogs.push(function(cb) {
         rotatingLogStream.write(log + "\n", cb);
       });
